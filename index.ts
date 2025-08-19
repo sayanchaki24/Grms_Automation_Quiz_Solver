@@ -7,7 +7,7 @@ import { GoogleGenerativeAI, GenerativeModel } from "@google/generative-ai";
 import { z } from 'zod';
 
 // Initialize Google Generative AI with API key
-const genAI = new GoogleGenerativeAI(process.env.GOOGLE_GENERATIVE_AI_API_KEY || "AIzaSyBtl8q8OPzQwhO0V55xw21mcKzVbEhot1Q");
+const genAI = new GoogleGenerativeAI(process.env.GOOGLE_GENERATIVE_AI_API_KEY || "API_key");
 const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
 // Define Zod schema for quiz content extraction
