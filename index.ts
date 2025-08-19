@@ -167,7 +167,7 @@ async function main({
   }
 
   try {
-    await page.act("Type '22BTAI160@gcu.edu.in' in the username field");
+    await page.act("Type 'Your_GRMS_email' in the username field");
   } catch (e) {
     stagehand.log({ category: "grms-automation", message: "Error typing username, trying alternative" });
     const usernameObservations = await page.observe("Identify the username or email input field");
@@ -177,7 +177,7 @@ async function main({
       await clearOverlays(page);
       await page.act(usernameObservations[0]);
       await page.waitForTimeout(300);
-      await page.keyboard.type("22BTAI160@gcu.edu.in", { delay: 50 });
+      await page.keyboard.type("Your_GRMS_email", { delay: 50 });
     } else {
       stagehand.log({ category: "grms-automation", message: "ERROR: Could not find username field" });
       throw new Error("Could not find username field");
@@ -202,7 +202,7 @@ async function main({
   }
 
   try {
-    await page.act("Type 'fighterjet24' in the password field");
+    await page.act("Type 'Your_GRMS_email_password' in the password field");
   } catch (e) {
     stagehand.log({ category: "grms-automation", message: "Error typing password, trying alternative" });
     const passwordObservations = await page.observe("Identify the password input field");
@@ -212,7 +212,7 @@ async function main({
       await clearOverlays(page);
       await page.act(passwordObservations[0]);
       await page.waitForTimeout(300);
-      await page.keyboard.type("fighterjet24", { delay: 50 });
+      await page.keyboard.type("Your_GRMS_email_password", { delay: 50 });
     } else {
       stagehand.log({ category: "grms-automation", message: "ERROR: Could not find password field" });
       throw new Error("Could not find password field");
